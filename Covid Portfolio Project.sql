@@ -83,7 +83,7 @@ From PortfolioProject..CovidDeaths dea
 Join PortfolioProject..CovidVaccinations vac
 	On dea.location = vac.location
 	and dea.date = vac.date
-where dea.continent is not null
+Where dea.continent is not null
 Order by 2,3
 
 
@@ -98,7 +98,7 @@ From PortfolioProject..CovidDeaths dea
 Join PortfolioProject..CovidVaccinations vac
 	On dea.location = vac.location
 	and dea.date = vac.date
-where dea.continent is not null
+Where dea.continent is not null
 -- Order by 2,3
 )
 Select *, (RollingPeopleVaccinated/Population)*100
@@ -125,7 +125,7 @@ From PortfolioProject..CovidDeaths dea
 Join PortfolioProject..CovidVaccinations vac
 	On dea.location = vac.location
 	and dea.date = vac.date
---where dea.continent is not null
+--Where dea.continent is not null
 -- Order by 2,3
 
 Select *, (RollingPeopleVaccinated/Population)*100
@@ -145,7 +145,7 @@ From PortfolioProject..CovidDeaths dea
 Join PortfolioProject..CovidVaccinations vac
 	On dea.location = vac.location
 	and dea.date = vac.date
-where dea.continent is not null
+Where dea.continent is not null
 --Order by 2,3
 
 
