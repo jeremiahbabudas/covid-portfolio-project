@@ -7,6 +7,7 @@ Order by 3,4
 --From PortfolioProject..CovidVaccinations
 --Order by 3,4
 
+	
 --Select Data that we are going to be using
 
 Select Location, date, total_cases, new_cases, total_deaths, population
@@ -23,7 +24,7 @@ Where location like '%states%'
 and continent is not null
 Order by 1,2
 
-
+	
 -- Looking at Total Cases vs Population
 -- Shows what percentage of population got Covid
 
@@ -77,7 +78,6 @@ Order by 1,2
 
 -- Looking at Total population vs Vaccinations
 
-
 Select dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinations, SUM(CONVERT(int,vac.new_vaccinations)) OVER (Partition by dea.location order by dea.location, dea.date) as RollingPeopleVaccinated
 From PortfolioProject..CovidDeaths dea
 Join PortfolioProject..CovidVaccinations vac
@@ -88,7 +88,6 @@ Order by 2,3
 
 
 -- USE CTE
-
 
 With PopvsVac (Continent, Location, Date, Population, New_Vaccinations, RollingPeopleVaccinated)
 as
@@ -103,7 +102,6 @@ Where dea.continent is not null
 )
 Select *, (RollingPeopleVaccinated/Population)*100
 From PopvsVac
-
 
 
 -- TEMP TABLE (#)
@@ -132,10 +130,7 @@ Select *, (RollingPeopleVaccinated/Population)*100
 From #PercentPopulationVaccinated
 
 
-
-
 -- Creating view to store data for later visualizations
-
 
 Create View PercentPopulationVaccinated as
 Select dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinations
@@ -151,4 +146,3 @@ Where dea.continent is not null
 
 SELECT *
 From PercentPopulationVaccinated
-
