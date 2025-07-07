@@ -1,4 +1,4 @@
-# 🦠 COVID-19 Data Exploration with SQL
+# COVID-19 Data Exploration with SQL
 
 This project explores global COVID-19 data using SQL. It involves cleaning, analyzing, and deriving insights from two datasets: `CovidDeaths` and `CovidVaccinations`. The analysis was done using SQL Server.
 
