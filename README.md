@@ -40,9 +40,9 @@ Final views and tables generated can be used for:
 - Further visual analysis
 
 ## 📷 Screenshots
-![Screenshot 1](Covid%201.png)
+![Screenshot 1](Screenshots/Covid%201.png)
 
-![Screenshot 2](Covid%202.png)
+![Screenshot 1](Screenshots/Covid%202.png)
 
 
 ## 🛠 Sample Queries
